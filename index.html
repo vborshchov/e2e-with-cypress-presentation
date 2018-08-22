@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduction to VueJS</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<link rel="stylesheet" href="css/custom.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Start your end to end testing</h1>
+					<h6>with cypress.io</h6>
+
+					<p>
+						<small>Victor Borshchov, <a href="https://triare.net/" target="_blank">Triare</a></small>
+					</p>
+				</section>
+				<section>
+					<h2>Topics</h2>
+
+					<section>
+						<ul>
+							<li>Testing intro</li>
+							<li>What is Cypress?</li>
+							<li>Demo</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>Testing pyramid</h2>
+				</section>
+
+				<section>
+					<img src="images/testing pyramid.webp"/>
+				</section>
+
+				<section>
+					<section>
+							<h3>Which type of testing is most inportant?</h3>
+							<h2>unit, e2e, both?</h2>
+					</section>
+				</section>
+
+				<section>
+					<h3>Unit and integration tests are great place to start but E2E tests combines everything and actually find bugs.</h3>
+				</section>
+
+				<section>
+					<div class="container">
+						<div class="col">
+							<h3>Unit testing</h3>
+							<ul class="fragment highlight-green" data-fragment-index="1">
+								<li>Fast</li>
+								<li>Reliable</li>
+								<li>Isolated faillures</li>
+							</ul>
+							<br>
+							<br>
+							<br>
+							<ul class="fragment highlight-blue" data-fragment-index="2">
+								<li>Prefered by developers</li>
+							</ul>
+							<br>
+							<br>
+							<br>
+							<ul class="fragment highlight-red" data-fragment-index="3">
+								<li>Time consuming</li>
+							</ul>
+						</div>
+						<div class="col">
+							<h3>E2E testing</h3>
+							<ul class="fragment highlight-green" data-fragment-index="4">
+								<li>Simulates a real user</li>
+								<li>Catches real bugs</li>
+								<li>Often easy to migrate from manual testing</li>
+							</ul>
+							<br>
+							<br>
+							<ul class="fragment highlight-blue" data-fragment-index="5">
+								<li>Prefered by managers</li>
+							</ul>
+							<br>
+							<br>
+							<br>
+							<ul class="fragment highlight-red" data-fragment-index="6">
+								<li>Needs a deployed service to test</li>
+								<li>Many code-paths to test</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Tests are about giving confidence to developer</h2>
+				</section>
+
+				<section>
+					<h3>Tests can hold your back</h3>
+					<section>
+						<ul>
+							<li>Not fast enough feedback</li>
+							<li>Feedback is unclear</li>
+							<li>Updating tests is hard</li>
+							<li>Too complex tests</li>
+							<li>Too many tests, testing the same</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+						<p>Use the right strategy</p>
+						<p>Try to minimise the amount of double testing</p>
+						<p>Use the right tools</p>
+				</section>
+
+				<section>
+					<img src="images/cypress_logo.jpeg" alt="">
+					<h2>Cypress.io</h2>
+				</section>
+
+				<section>
+					<h3>What is cypress?</h3>
+					<section>
+						<p>Cypress is open source testing tool written entirely on JavaScript</p>
+						<p>Cypress spawns & drives the browser manually exatly like  you do in development</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Demo time</h2>
+				</section>
+
+				<section>
+					<h1>Questions?</h1>
+				</section>
+
+				<section>
+					<h1>Thank you</h1>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				width: 1024,
+				history: true,
+				transition: 'fade',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
